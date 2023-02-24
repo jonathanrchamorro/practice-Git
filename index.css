@@ -1,0 +1,10 @@
+.container {
+  width: 600px;
+  height: 300px;
+  border-radius: 2%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  border: solid;
+  background-color: red;
+}
