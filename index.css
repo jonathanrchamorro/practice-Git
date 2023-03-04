@@ -1,3 +1,14 @@
+:root{
+  --size-shadow: 1px 5px;
+  --transition-style: all .3s ease;
+  --color-default-shadow: rgba(0,0,0,0.3);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .container {
   width: 600px;
   height: 300px;
@@ -7,4 +18,66 @@
   grid-template-columns: 300px 300px;
   border: solid;
   background-color: red;
+}
+
+body{
+  background-color: #f0f0f0;
+  height: 90vh;
+}
+
+body header{
+  padding: 10px;
+  background: #f8f8f8;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+body main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+body main .ctn-main{
+  width: 100%;
+  max-width: 500px;
+  min-height: 400px;
+  background: #c7c7c767;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: centers;
+  box-shadow: 0 var(--size-shadow) var(--color-default-shadow);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .ctn-main p.text-main{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+body main .ctn-main button{
+  border: none;
+  background: red;
+  border-radius: 5px;
+  transition: var(--transition-style);
+  overflow: hidden;
+}
+body main .ctn-main button a{
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 17px;
+  font-size: 2rem;
+  transition:  var(--transition-style);
+}
+body main .ctn-main button:hover{
+  box-shadow: 0 var(--size-shadow) var(--color-default-shadow);
+}
+body main .ctn-main button:hover > a{
+  transform: scale(1.2);
 }
